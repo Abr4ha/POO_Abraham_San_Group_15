@@ -74,12 +74,14 @@ class EstructuradeDatos{
                         celsius = entrada.nextFloat();
                         kelvin = 274.14 * celsius;
                         rankine = 493.47 * celsius;
+                        System.out.println("la Temperatura en kelvin es : " +kelvin+"\nla temperatura en rankie es : "+rankine);
                     break;
                     case 'r':
                         System.out.println("Ingrese la temperatura en rankie : ");
                         rankine = entrada.nextFloat();
                         kelvin = 0.5555 * rankine;
                         celsius = -272.5944 * rankine;
+                        System.out.println("la Temperatura en kelvin es : " +kelvin+"\nla temperatura en celsius es : "+celsius);
                     break;
                     default:
                         System.out.println("No esta registrado");
@@ -145,7 +147,7 @@ class EstructuradeDatos{
                     }
                 break;
                 case 11:
-                //tarea
+                
                 case 12:
                 //tarea
                 case 13:
@@ -193,6 +195,6 @@ class EstructuradeDatos{
             }
             System.out.println("¿Deseas Repetir el programa? Si lo desea escriba s");
             letras = entrada.next().charAt(0);
-        }while(letras == 's');
+        }while(letras == 's'||letras == 'S');
     }
 }   
