@@ -30,20 +30,23 @@ public class Ejercicios {
                 n = entrada.nextInt();
                 System.out.println("Introduce el numero de filas :");
                 m = entrada.nextInt();
-                if( n%2==0){
-                    e = n/2;
-                }else{
-                    e = n;
-                    if( e >= 3){
-                        e = (n-1)/2;
+                if(n >= 3){
+                    if( n%2==0){
+                        e = n/2;
+                    }else{
+                        if( e >= 3){
+                            e = (n-1)/2;
+                        }
                     }
+                }else if (n == 2){
+                    e = n-1;
                 }
                 for(int i = 1; i<=e; i++){
                     for(int j = 1; j <= m; j++){
                         System.out.print("* ");
                     }
                     System.out.println(" ");
-                    if( e >= 2){
+                    if( n >= 2){
                         for(int l = 1; l<=m; l++){
                             System.out.print("/ ");
                         }
