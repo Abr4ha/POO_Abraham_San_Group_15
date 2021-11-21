@@ -34,9 +34,7 @@ public class Ejercicios {
                     if( n%2==0){
                         e = n/2;
                     }else{
-                        if( e >= 3){
-                            e = (n-1)/2;
-                        }
+                        e = (n-1)/2;
                     }
                 }else if (n == 2){
                     e = n-1;
@@ -53,7 +51,7 @@ public class Ejercicios {
                         System.out.println(" ");
                     }
                 }
-                if( e%2==0){
+                if( n%2 !=0){
                     for(int j = 1; j <= m; j++){
                         System.out.print("* ");
                     }
