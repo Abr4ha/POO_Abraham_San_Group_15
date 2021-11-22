@@ -51,7 +51,7 @@ public class Ejercicios {
                         System.out.println(" ");
                     }
                 }
-                if( n%2 !=0){
+                if( n%2 !=0 ){
                     for(int j = 1; j <= m; j++){
                         System.out.print("* ");
                     }
