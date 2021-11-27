@@ -1,17 +1,11 @@
 /*
-
 41 - 60
-
 Las funciones de la biblioteca 
-
 prestamo de libros
-
-*/ 
-
+*/
 import java.util.Scanner;
 import java.util.*;
 import javax.swing.*;
-
 public class Biblioteca{
 
     //vamos a crear un objeto para poder introducir los datos
@@ -26,7 +20,6 @@ public class Biblioteca{
     prestamo de libros
     Devolucion de libros
     */
-
     private String titulo, autor, isbn, genero;
     private int ejemplares;
     private double costo_prestamo, total;
@@ -44,9 +37,8 @@ public class Biblioteca{
             try{
                 text = JOptionPane.showInputDialog("Elija la funcion que desea ejecutar: "
                                         + "\n 1.- Prestamo del libro"
-                                        + "\n 2.- Devolucion del libro");
-                      //                  + "\n 3.- Menu");
-                //int opcion;
+                                        + "\n 2.- Devolucion del libro"
+                                        + "\n 3.- Menu");
                 opcion = Integer.parseInt(text);
             }
             catch(Exception ex){
@@ -56,12 +48,15 @@ public class Biblioteca{
             switch (opcion) {
                 case 1:
                     Prestamo();
+                    error = false;
                     break;
                 case 2:
                     Devolucion();
+                    error = false;
                     break;
-                //case 3:
-                  //  error = false;
+                case 3:
+                  error = false;
+                  return;
                    // int opciones = 1;
                     
                     //break;
@@ -72,7 +67,7 @@ public class Biblioteca{
             }
         }while(error);
     }
-
+    
     public void Prestamo(){
         /*
         Lo primero es que deberan de crear los objetos de Libros
@@ -93,14 +88,14 @@ public class Biblioteca{
         Cuarto
         Se debe de visualizar los datos del libro que se presto y quedan x cantidad de existencias
         
-        */ 
-
-        Libro drama = new Libro("La cumbre escarlata", "No me lo se", "12345-BN", 5);
-        Libro fantasmas = new Libro("Las cronicas Mutantes", "No me lo se", "00345-BN", 3);
-        Libro novela = new Libro("Don Quijote de la Mancha","Miguel de Cervantes","77801-BN")
-
-        Sytem.out.println("los libros son "+Libro.size()+"...")
-
+        */
+        //private String titulo, autor, isbn, genero;
+        //private int ejemplares;
+        //private double costo_prestamo, total;
+        Libros fantasmas = new Libros("Las cronicas Mutantes", "No me lo se", "00345-BN", 3);
+        Libros novela = new Libros("Don Quijote de la Mancha","Miguel de Cervantes","77801-BN",8);
+        Libros drama = new Libros("La cumbre escarlata", "No me lo se", "12345-BN", 5);
+        
     }
 
     public void Devolucion(){
@@ -118,7 +113,7 @@ public class Biblioteca{
 
         Visualizar los datos del libro de nuevo
         */
-    }
+    }    
 }
 
 

@@ -19,29 +19,13 @@ public class Principal{
     public static void main(String[] args){
         String text;
         int opciones=0;
-    
-    /*
-    Vamos a visualizar en una interfaz pequeña las opciones del menu
-    */
-        //menu
-        //instancia
         Principal mainp = new Principal();
-
-        //ciclo para que el menu se repita y sea visible para el usuario
         do{
             mainp.MenuP();
-            //Biblioteca op = new Biblioteca();
-            //op.opciones;
-            //System.out.println("la opcion es "+ opcion);
-            //if (opciones != 1){
-                text = JOptionPane.showInputDialog("En caso de que desee regresar al menu principal digite 1");
-                opciones = Integer.parseInt(text);
-            //}
-
+            text = JOptionPane.showInputDialog("En caso de que desee regresar al menu principal digite 1");
+            opciones = Integer.parseInt(text);
         }while(opciones == 1);
         System.exit(0);
-
-
     }
 
     public void MenuP(){
@@ -49,44 +33,44 @@ public class Principal{
         int opciones=0;
         //los metodos void (vacios), son porque no reciben ningun parametro
         do{
-            //excepciones
             try{
-                //es para ingresar texto
                 text = JOptionPane.showInputDialog("Seleccione el programa a ejecutar de la siguiente lista: \n 1.- Consultar el sueldo Personal." 
                         + "\n 2.- Costos y Proveedores."
-                        + "\n 3.- Prestamo y devolucion de libros");
-                        // cuando se utiliza JOptionPane solo se reciben cadenas
-                        //voy a convertir esa cadena en un entero
+                        + "\n 3.- Prestamo y devolucion de libros"
+                        + "\n 4.- Salir");
                         opciones = Integer.parseInt(text);
+                    error = false;
             }catch(Exception e){
-                JOptionPane.showMessageDialog(null,"Para acceder a un programa solo se puede ingresar los numeros del 1 al 3");
-                //vamos a obtener el error, es visible para el usuario
+                //JOptionPane.showMessageDialog(null,"Por favor escoga una de las opciones validas del 1 al 3");
                 //JOptionPane.showMessageDialog(null, " "+e.getMessage());
-                //si solo queremos imprimir el error en consola
                 //System.out.println("El erro es: " + e.getMessage());
+                e.printStackTrace(System.err);
                 error = true ;
 
             }
             switch ( opciones ) {
                 case 1:
                     //System.out.println("Consulta");
-                    //JOptionPane.showInternalMessageDialog(null,"Consulta Personal");
-                    Biblioteca mbiblioteca = new Biblioteca();
-                    mbiblioteca.Libros();
+                    JOptionPane.showInternalMessageDialog(null,"Consultar Sueldo Personal");
+                    error = false;
                     break;
                 case 2:
                     //metodo
+                    JOptionPane.showInternalMessageDialog(null,"Costo y Proveedores");
+                    error = false;
                     break;
-                
                 case 3:
-                    //metodo
-                    //Biblioteca obj = new Biblioteca();
-                    //obj.menu();
+                    Biblioteca mbiblioteca = new Biblioteca();
+                    mbiblioteca.Libros();
+                    error = false;
                     break;
-            
+                case 4:
+                    error = false;
+                    System.exit(0);
+                    break;
                 default:
                     error = true;
-                    JOptionPane.showMessageDialog(null,"Opcion no valida ingrese un opcion valida","Error",JOptionPane.ERROR_MESSAGE);
+                    JOptionPane.showMessageDialog(null,"Opcion no valida ingrese un opcion valida 1 al 3","Error",JOptionPane.ERROR_MESSAGE);
                     break;
             }
         }while (error);
