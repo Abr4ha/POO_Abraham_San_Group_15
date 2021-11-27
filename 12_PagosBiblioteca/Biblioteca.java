@@ -27,43 +27,50 @@ public class Biblioteca{
     Devolucion de libros
     */
 
-    String titulo, autor, isbn, genero;
-    int ejemplares;
-    double costo_prestamo, total;
+    private String titulo, autor, isbn, genero;
+    private int ejemplares;
+    private double costo_prestamo, total;
+    private boolean error;
 
 
     public void Libros(){
         //menu para el prestamo del libro
-
         //agregar el try catch para el manejo de errores
         //identificar si son variables publicas o privadas para el manejo de los datos
         String text;
-
-        text = JOptionPane.showInputDialog("Elija la funcion que desea ejecutar: "
-                                + "\n 1.- Prestamo del libro"
-                                + "\n 2.- Devolucion del libro");
-
-        int opcion;
-
-        opcion = Integer.parseInt(text);
-
-        switch (opcion) {
-            case 1:
-
-                Prestamo();
-                
-                break;
-
-            case 2:
-
-                Devolucion();
-
-                break;
-            default:
-
-                JOptionPane.showInputDialog("Gracias por usar el programa de Prestamos de Libros");
-                break;
-        }
+        int opcion=0;
+        do{
+            error = false;
+            try{
+                text = JOptionPane.showInputDialog("Elija la funcion que desea ejecutar: "
+                                        + "\n 1.- Prestamo del libro"
+                                        + "\n 2.- Devolucion del libro");
+                      //                  + "\n 3.- Menu");
+                //int opcion;
+                opcion = Integer.parseInt(text);
+            }
+            catch(Exception ex){
+                JOptionPane.showMessageDialog(null,"Para acceder a un programa solo se puede ingresar los numeros del 1 al 2");
+                error = true;
+            }
+            switch (opcion) {
+                case 1:
+                    Prestamo();
+                    break;
+                case 2:
+                    Devolucion();
+                    break;
+                //case 3:
+                  //  error = false;
+                   // int opciones = 1;
+                    
+                    //break;
+                default:
+                    error = true;
+                    JOptionPane.showMessageDialog(null,"Opcion no valida ingrese un opcion valida","Error",JOptionPane.ERROR_MESSAGE);
+                    break;
+            }
+        }while(error);
     }
 
     public void Prestamo(){
@@ -87,6 +94,12 @@ public class Biblioteca{
         Se debe de visualizar los datos del libro que se presto y quedan x cantidad de existencias
         
         */ 
+
+        Libro drama = new Libro("La cumbre escarlata", "No me lo se", "12345-BN", 5);
+        Libro fantasmas = new Libro("Las cronicas Mutantes", "No me lo se", "00345-BN", 3);
+        Libro novela = new Libro("Don Quijote de la Mancha","Miguel de Cervantes","77801-BN")
+
+        Sytem.out.println("los libros son "+Libro.size()+"...")
 
     }
 
