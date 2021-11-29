@@ -23,7 +23,7 @@ public class Biblioteca{
     private String titulo, autor, isbn, genero;
     private int ejemplares;
     private double costo_prestamo, total;
-    private boolean error;
+    boolean error;
 
 
     public void Libros(){
@@ -55,8 +55,10 @@ public class Biblioteca{
                     error = false;
                     break;
                 case 3:
-                  error = false;
-                  return;
+                    Principal llamado = new Principal();
+                    llamado.MenuP();
+                    error = false;
+                return;
                    // int opciones = 1;
                     
                     //break;
@@ -87,14 +89,14 @@ public class Biblioteca{
 
         Cuarto
         Se debe de visualizar los datos del libro que se presto y quedan x cantidad de existencias
-        
         */
-        //private String titulo, autor, isbn, genero;
-        //private int ejemplares;
-        //private double costo_prestamo, total;
-        Libros fantasmas = new Libros("Las cronicas Mutantes", "No me lo se", "00345-BN", 3);
-        Libros novela = new Libros("Don Quijote de la Mancha","Miguel de Cervantes","77801-BN",8);
-        Libros drama = new Libros("La cumbre escarlata", "No me lo se", "12345-BN", 5);
+        String[] Libros = {"fantasmas", "novela", "drama"};
+        for(String i:Libros){
+            //JOptionPane.showInternalMessageDialog(nombres[i]);
+            System.out.print(i+" ");
+
+        }
+        Libros tipoLibro = new Libro();
         
     }
 
@@ -115,5 +117,3 @@ public class Biblioteca{
         */
     }    
 }
-
-
