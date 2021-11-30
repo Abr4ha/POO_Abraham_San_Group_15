@@ -20,6 +20,8 @@ public class Biblioteca{
     prestamo de libros
     Devolucion de libros
     */
+    String[] Libros = {"fantasmas", "novela", "drama"};
+    //ArrayList<String> Libros = new ArrayList<String>();
     private String titulo, autor, isbn, genero;
     private int ejemplares;
     private double costo_prestamo, total;
@@ -39,7 +41,12 @@ public class Biblioteca{
                                         + "\n 1.- Prestamo del libro"
                                         + "\n 2.- Devolucion del libro"
                                         + "\n 3.- Menu");
-                opcion = Integer.parseInt(text);
+                if(Objects.isNull(text)){
+                    Principal llamado = new Principal();
+                    llamado.MenuP();
+                }else{
+                    opcion = Integer.parseInt(text);
+                }
             }
             catch(Exception ex){
                 JOptionPane.showMessageDialog(null,"Para acceder a un programa solo se puede ingresar los numeros del 1 al 2");
@@ -90,13 +97,10 @@ public class Biblioteca{
         Cuarto
         Se debe de visualizar los datos del libro que se presto y quedan x cantidad de existencias
         */
-        String[] Libros = {"fantasmas", "novela", "drama"};
-        for(String i:Libros){
-            //JOptionPane.showInternalMessageDialog(nombres[i]);
-            System.out.print(i+" ");
-
-        }
-        Libros tipoLibro = new Libro();
+        //String[] Libros = {"fantasmas", "novela", "drama"};
+        //for (int i=1; i<=10; i++)
+        JOptionPane.showInternalMessageDialog(null, "Los Tipos libros son "+ Arrays.toString(Libros));
+        //Libros tipoLibro = new Libro();
         
     }
 

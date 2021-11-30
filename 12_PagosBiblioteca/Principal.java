@@ -38,8 +38,13 @@ public class Principal{
                         + "\n 2.- Costos y Proveedores."
                         + "\n 3.- Prestamo y devolucion de libros"
                         + "\n 4.- Salir");
+                    if(text != null){
                         opciones = Integer.parseInt(text);
-                    error = false;
+                        error = false;
+                    }else{
+                        System.exit(0);
+                    }
+
             }catch(Exception e){
                 //JOptionPane.showMessageDialog(null,"Por favor escoga una de las opciones validas del 1 al 3");
                 //JOptionPane.showMessageDialog(null, " "+e.getMessage());
