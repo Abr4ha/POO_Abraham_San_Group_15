@@ -10,8 +10,9 @@ package com.mycompany._ventana;
  */
 import java.awt.Font;
 import java.awt.event.*;
+import java.util.EventListener;
 import javax.swing.*;
-public class Ventana {
+public class Ventana extends EventListener{
 
     String Usuario, passwordUser;
     int count = 0;
@@ -57,7 +58,7 @@ public class Ventana {
         registroButton.addActionListener((ActionEvent e) -> {
             RegistrarUsuario();
         });
-        
+        panel.add(registroButton);
     }
     private static void RegistrarUsuario() {
     }
@@ -77,8 +78,17 @@ public class Ventana {
         JLabel texto1 = new JLabel("Bienvendido", JLabel.CENTER);
         texto1.setBounds(0, 0, 160, 25);
         panel.add(texto1);
+        JButton cerarSesion = new JButton("Registrarse");
+        cerarSesion.setBounds(180, 90, 120, 25);
+        cerarSesion.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+            }
+        });
     }
+        
     public static void UsuarioNoValido(){
-        JOptionPane.showMessageDialog(null, "Usuario o Contraseña no valida");
-    }
+            JOptionPane.showMessageDialog(null, "Usuario o Contraseña no valida");
+        }
+    
 }
