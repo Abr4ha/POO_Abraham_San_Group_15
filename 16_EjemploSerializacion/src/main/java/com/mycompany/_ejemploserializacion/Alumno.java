@@ -8,6 +8,16 @@ package com.mycompany._ejemploserializacion;
  *
  * @author hyexzc
  */
-public class Alumno {
-    
+public class Alumno extends Persona{
+    private int boleta;
+    public Alumno(){
+        
+    }   
+    public Alumno(int boleta){
+        this.boleta = boleta;
+    }
+    public Alumno(int boleta, String nombre, int edad){
+        super(nombre, edad);
+        this.boleta = boleta;
+    }
 }

@@ -8,7 +8,7 @@ package com.mycompany._ejemploserializacion;
  *
  * @author hyexzc
  */
-public class Principal {
+public class Serializable {
     public static void main(String[] args){
         
     }

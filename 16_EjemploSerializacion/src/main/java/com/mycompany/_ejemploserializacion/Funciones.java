@@ -20,11 +20,11 @@ public class Funciones {
     Persona alumno = new Alumno();
     void menu(){
        while(true){
-           while(rep.equaksignoreCase("si")){
+           while(rep.equalsIgnoreCase("si")){
                try{
                    String var = JOptionPane.showInputDialog("Ingrese la Opocion deseada"
-                           + "1.- REgistart nuevo Profesor."
-                           + "2.- Registart nuevo Alumno."
+                           + "1.- Registrar nuevo Profesor."
+                           + "2.- Registrar nuevo Alumno."
                            + "3.- Consultar Estudiantes"
                            + "4.-Salir");
                    if(var == null){
@@ -33,6 +33,9 @@ public class Funciones {
                    int opcion = Integer.parseInt(var);
                    switch (opcion){
                        case 1:
+                           pedirDatosProfesor();
+                           profesor = new Profesor(numero_empleado, nombre, edad);
+                           guardaProfesor;
                        case 2:
                            pedirDatosAlumno();
                            alumno = new Alumno(bol, nombre, edad);
