@@ -114,6 +114,7 @@ public class Boletos extends JFrame {
         panel.setLayout(null);
         panel.setBackground(Color.WHITE);
         JList ListFunciones = new JList();
+        //Hello
         
     }
 
