@@ -1,0 +1,70 @@
+@keyframes animacion_test{
+    from{
+        background-color :#dd9900;
+    }
+    td{
+        background-color:  #aaff11;
+    }
+}
+@keyframes girar{
+    from{
+        transform: rotate(0deg);
+    }
+    to{
+        transform: rotate(360deg);
+    }
+}
+@keyframes label-animacion{
+    from{
+        transform: rotate(0deg);
+        margin-left: 0;
+    }
+    to{
+        transform: rotate(180deg);
+        margin-left: 85vw;
+    }
+}
+
+.label-container{
+    width: 100%;
+    padding: 1rem;
+    box-sizing: border-box;
+}
+.label{
+    width: 64px;
+    background-color: rgb(60, 190, 80);
+    color: white;
+    font-size: 1.3rem;
+    padding: 1rem;
+    border-radius: 20px;
+    text-align: center;
+    animation-name: label-animacion;
+    animation-duration: 2s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+.Loader{
+    width: 64px;
+    height: 64px;
+    border: 16px solid rgb(60, 190, 80);
+    border-top: 16px solid rgb(225, 115, 0);
+    border-radius: : 50%;
+    animation: girar 2s ease-in-out infinite;
+}
+.Loader-doble{
+    width: 64px;
+    height: 64px;
+    border: 16px solid rgb(60, 190, 80);
+    border-top: 16px solid rgb(225, 115, 0);
+    border-bottom: 16px solid rgb(117, 11, 1);
+    border-radius: : 50%;
+    animation: girar 2s ease-in-out infinite;
+}
+.animada{
+    width: 100%;
+    background-color: #dd9900;
+    color: white;
+    text-align: center;
+    height: 
+}
