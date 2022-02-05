@@ -7,23 +7,22 @@ function validar(formulario){
         return (false);
     }
     //se cambio var a let
-    var checkOK ="ABCDEFGHIJKLMNOPKRSTUVWXYZabcdefghijklmnopkrstuvwxyz";
+    var checkOk ="ABCDEFGHIJKLMNOPKRSTUVWXYZ"+"abcdefghijklmnopkrstuvwxyz";
     var checkStr = formulario.nombre.value;
     var allvalid = true;
-    for(var i = 0; i < checkStr.lenght; i++ ){
+    for(var i = 0; i < checkStr.length; i++ ){
         var ch = checkStr.charAt(i);
-        for(var j = 0; j < checkOK.length; j++ ){
-            if(ch == checkOK.charAt(j)){
-                break;
-            }
-            if(j == checkOK.length){
-                allvalid = false;
-                break;
-            }
+        for(var j = 0; j < checkOk.length; j++ ){
+            if(ch == checkOk.charAt(j))
+            break;
+        }
+        if(j == checkOk.length){
+            allvalid = false;
+            break;
         }
     }
     if(!allvalid){
-        alert("Escribe solo letras en el campo Nombre")
+        alert("Escribe solo letras en el campo Nombre");
         formulario.nombre.focus();
         return (false);
     }
