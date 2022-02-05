@@ -7,8 +7,9 @@ function validar(formulario){
         return(false);
     }
     //se cambio var a let
-    var checkOK="QWERTYUIOPASDFGHJKLÑZXCVBNM"+"qwertyuiopasdfghjklñzxcvbnm";
+    var checkOK="ABCDEFGHIJKLMNÑOPKRSTUVWXYZabcdefghijklmnñopkrstuvwxyz";
     var checkStr= formulario.nombre.value;
+    var allvalid= true;
     for(var i = 0; i < checkStr.lenght; i++){
         var ch = checkStr.charAt(i);
         for(var j=0; j < checkOK.length; j++){
@@ -21,7 +22,9 @@ function validar(formulario){
             }
         }
     }
-    if(!){
-        
+    if(!allvalid){
+        alert("Escribe solo letras en el campo Nombre")
+        formulario.nombre.focus();
+        return (false);
     }
 }
