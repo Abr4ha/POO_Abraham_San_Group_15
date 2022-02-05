@@ -1,7 +1,7 @@
 *{
     padding: 0;
     margin : 0;
-    color : #aa0099,
+    color : #aa0099;
     text-align : center;
     font-size: 24px;
     font-family: 'Calibre';
@@ -27,8 +27,8 @@ nav, section, footer, article, aside{
 }
 article, aside{
     width: 40%;
-    display: inline;
+    display: inline-block;
     height: 200px;
-    background-color: ;
+    background-color: rgb(141, 21, 240);
 }
-<!--Tarea hacer un curriculum -->
+/*Tarea hacer un curriculum*/
