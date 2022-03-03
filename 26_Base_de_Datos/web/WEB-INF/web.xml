@@ -4,9 +4,17 @@
         <servlet-name>registrousuario</servlet-name>
         <servlet-class>registrousuario</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>registrodeusuario</servlet-name>
+        <servlet-class>Registro.registrodeusuario</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>registrousuario</servlet-name>
         <url-pattern>/registrousuario</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>registrodeusuario</servlet-name>
+        <url-pattern>/registrodeusuario</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>
